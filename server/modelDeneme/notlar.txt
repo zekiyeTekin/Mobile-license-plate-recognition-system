@@ -1,0 +1,565 @@
+------ doğru okunabilen görseller-----------
+images.jpg
+----------------util son hali fonksiyonlaşmış hali
+import easyocr as ocr
+import cv2
+import numpy as np
+import os
+import glob
+
+
+def plate_character_recognition():
+    # Resmi yükle
+    # image_path = 'saved_car/...jpg'  # Gerçek resim yolunu buraya girin
+    latest_image = max(glob.glob('save_car/*.jpg'), key=os.path.getctime)
+    # Resmi yükle
+    image_path = latest_image
+    img = cv2.imread(image_path)
+
+    # Kırmızı rengin BGR değerlerini tanımla
+    # Bu değerler genel bir tahmindir ve görüntüye göre ayarlanmalıdır.
+    lower_red = np.array([0, 0, 100])
+    upper_red = np.array([100, 100, 255])
+
+    # Kırmızı rengi maskele
+    mask = cv2.inRange(img, lower_red, upper_red)
+
+    # Maske üzerinde konturları bul
+    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    # Eğer kontur varsa, en büyük konturu bul
+    if contours:
+        # En büyük kontur genellikle plaka çerçevesi olacaktır
+        largest_contour = max(contours, key=cv2.contourArea)
+        x, y, w, h = cv2.boundingRect(largest_contour)
+
+        # Kırpma işlemi için sınırlayıcı kutunun koordinatlarını kullan
+        cropped_img = img[y:y + h, x:x + w]
+
+        ocr_motoru = ocr.Reader(['en', 'tr'])
+        yazilar = ocr_motoru.readtext(cropped_img)
+        for yazi in yazilar:
+            print(yazi)
+
+        save_directory = 'saved_plates'
+        os.makedirs(save_directory, exist_ok=True)
+
+        # Kırpılmış resmi kaydet
+        save_path = os.path.join(save_directory, 'cropped_plaka.jpg')  # Kaydedilecek resmin dosya adı
+        cv2.imwrite(save_path, cropped_img)
+
+        # Kırpılmış resmi göster
+        cv2.imshow('Cropped Image', cropped_img)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
+
+
+if __name__ == "__main__":
+    plate_character_recognition()
+
+
+-------------------------------------------------------------------------
+
+
+
+# Tesseract yolu
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Zekiye Tekin\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+
+# OCR'den detaylı verileri al
+details = pytesseract.image_to_data(img, config=custom_config, output_type=Output.DICT)
+
+
+--------görsel üzerinden plakayı alabiliyor----------
+from ultralytics import YOLO
+from PIL import Image
+
+
+# Eğittiğiniz modelin dosya yolu
+model_path = 'best.pt'
+
+# YOLO modelini yükle
+model = YOLO(model_path)
+
+# Test edilecek resmin dosya yolu
+#image_path = 'arac1.jpg'
+
+# Plaka tanıma işlemi
+#results = model(image_path)
+
+
+im1 =Image.open("arac3.jpg")
+sonuc = model.predict(source=im1, save=True)
+
+
+
+---------# Görüntüyü webcam üzerinden aldığını siyah beyaz yapabiliyor
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    success,img =cap.read()
+    imgGri = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    cv2.imshow("arac2",imgGri)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Webcam kapat
+cap.release()
+
+# Pencereleri kapat
+cv2.destroyAllWindows()
+
+
+#kamerayı açıyor
+
+import cv2
+import os
+
+output_directory = "webcam_images"
+if not os.path.exists(output_directory):
+    os.makedirs(output_directory)
+
+index = 1
+
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+
+    cv2.imshow('Webcam', frame)
+
+    file_name = os.path.join(output_directory, f'arac{index}.png')
+    cv2.imwrite(file_name, frame)
+
+    index += 1
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+
+cap.release()
+
+cv2.destroyAllWindows()
+
+
+------------------VİDEODAN GÖRÜYORR----------------------
+
+import cv2
+from ultralytics import YOLO
+
+# Load the YOLOv8 model
+model = YOLO('best.pt')
+
+# Open the video file
+#video_path = "C:\Users\Zekiye Tekin\PycharmProjects\modelDeneme\arac1.jpg"
+cap = cv2.VideoCapture(0)
+
+# Loop through the video frames
+while cap.isOpened():
+    # Read a frame from the video
+    success, frame = cap.read()
+
+    if success:
+        # Run YOLOv8 inference on the frame
+        results = model(frame)
+
+        # Visualize the results on the frame
+        annotated_frame = results[0].plot()
+
+        # Display the annotated frame
+        cv2.imshow("YOLOv8 Inference", annotated_frame)
+
+        # Break the loop if 'q' is pressed
+        if cv2.waitKey(1) & 0xFF == ord("q"):
+            break
+    else:
+        # Break the loop if the end of the video is reached
+        break
+
+# Release the video capture object and close the display window
+cap.release()
+cv2.destroyAllWindows()
+
+
+
+-------------kmeradn görüyor-------------
+import cv2
+from ultralytics import YOLO
+
+# Load the YOLOv8 model
+model = YOLO('best.pt')
+
+cap = cv2.VideoCapture(0)
+
+# Loop through the video frames
+while cap.isOpened():
+    # Read a frame from the video
+    success, frame = cap.read()
+
+    if success:
+        # Run YOLOv8 inference on the frame
+        results = model(frame)
+
+        # Visualize the results on the frame
+        annotated_frame = results[0].plot()
+
+        # Display the annotated frame
+        cv2.imshow("YOLOv8 Inference", annotated_frame)
+
+        # Break the loop if 'q' is pressed
+        if cv2.waitKey(1) & 0xFF == ord("q"):
+            break
+    else:
+        # Break the loop if the end of the video is reached
+        break
+
+# Release the video capture object and close the display window
+cap.release()
+cv2.destroyAllWindows()
+
+
+------------------elimdeki en iyi çalışan kod bu ----------------------------
+----- model ile kırmızı plaka yeri tespit edildikten sonra kırmızı ile tespit edilen yere yeşil sınırlayıcı kutu çizip
+----- o kutunhun kırpılmış halini gösterdik
+
+import cv2
+import numpy as np
+
+# Resmi yükle
+image_path = 'runs/detect/predict/arac1.jpg'  # Gerçek resim yolunu buraya girin
+img = cv2.imread(image_path)
+
+# Kırmızı rengin BGR değerlerini tanımla
+# Bu değerler genel bir tahmindir ve görüntüye göre ayarlanmalıdır.
+lower_red = np.array([0, 0, 100])
+upper_red = np.array([100, 100, 255])
+
+# Kırmızı rengi maskele
+mask = cv2.inRange(img, lower_red, upper_red)
+
+# Maske üzerinde konturları bul
+contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+# Eğer kontur varsa, en büyük konturu bul
+if contours:
+    # En büyük kontur genellikle plaka çerçevesi olacaktır
+    largest_contour = max(contours, key=cv2.contourArea)
+    x, y, w, h = cv2.boundingRect(largest_contour)
+
+    # Kırpma işlemi için sınırlayıcı kutunun koordinatlarını kullan
+    cropped_img = img[y:y+h, x:x+w]
+
+    # Kırpılmış resmi göster
+    cv2.imshow('Cropped Image', cropped_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+
+    ---------------------------------
+    """
+
+import cv2
+import numpy as np
+
+# Resmi yükle
+image_path = 'runs/detect/predict/arac1.jpg'  # Gerçek resim yolunu buraya girin
+img = cv2.imread(image_path)
+
+# Kırmızı rengin BGR değerlerini tanımla
+# Bu değerler genel bir tahmindir ve görüntüye göre ayarlanmalıdır.
+lower_red = np.array([0, 0, 100])
+upper_red = np.array([100, 100, 255])
+
+# Kırmızı rengi maskele
+mask = cv2.inRange(img, lower_red, upper_red)
+
+# Maske üzerinde konturları bul
+contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+# Eğer kontur varsa, en büyük konturu bul
+if contours:
+    # En büyük kontur genellikle plaka çerçevesi olacaktır
+    largest_contour = max(contours, key=cv2.contourArea)
+    x, y, w, h = cv2.boundingRect(largest_contour)
+
+    # Kırpma işlemi için sınırlayıcı kutunun koordinatlarını kullan
+    cropped_img = img[y:y+h, x:x+w]
+
+    # Kırpılmış resmi göster
+    cv2.imshow('Cropped Image', cropped_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+
+import cv2
+import numpy as np
+import pytesseract
+
+# Tesseract'ın yolu
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Zekiye Tekin\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+
+# Resmi yükle
+image_path = 'runs/detect/predict/arac1.jpg'  # Gerçek resim yolunu buraya girin
+img = cv2.imread(image_path)
+
+# Kırmızı rengin BGR değerlerini tanımla
+lower_red = np.array([0, 0, 100])
+upper_red = np.array([100, 100, 255])
+
+# Kırmızı rengi maskele
+mask = cv2.inRange(img, lower_red, upper_red)
+
+# Maske üzerinde konturları bul
+contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+# Eğer kontur varsa, en büyük konturu bul
+if contours:
+    largest_contour = max(contours, key=cv2.contourArea)
+    x, y, w, h = cv2.boundingRect(largest_contour)
+
+    # Kırpma işlemi için sınırlayıcı kutunun koordinatlarını kullan
+    cropped_img = img[y:y+h, x:x+w]
+
+    # OCR ile metni oku
+    text = pytesseract.image_to_string(cropped_img, lang='eng')
+    print("OCR'dan çıkan metin:", text)
+
+    # Kırpılmış resmi ve OCR'dan çıkan metni göster
+    cv2.imshow('Cropped Image', cropped_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+else:
+    print("Kırmızı sınırlayıcı kutu bulunamadı.")
+
+"""
+
+
+
+-----------------EN SON İSTEDİĞİM AŞAMA BU plakanın kırğpılıp okunması ve kırpılmış halini ekranda görüntüleme----------
+
+import cv2
+import numpy as np
+
+# Resmi yükle
+image_path = 'runs/detect/predict/arac1.jpg'  # Gerçek resim yolunu buraya girin
+img = cv2.imread(image_path)
+
+# Kırmızı rengin BGR değerlerini tanımla
+# Bu değerler genel bir tahmindir ve görüntüye göre ayarlanmalıdır.
+lower_red = np.array([0, 0, 100])
+upper_red = np.array([100, 100, 255])
+
+# Kırmızı rengi maskele
+mask = cv2.inRange(img, lower_red, upper_red)
+
+# Maske üzerinde konturları bul
+contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+# Eğer kontur varsa, en büyük konturu bul
+if contours:
+    # En büyük kontur genellikle plaka çerçevesi olacaktır
+    largest_contour = max(contours, key=cv2.contourArea)
+    x, y, w, h = cv2.boundingRect(largest_contour)
+
+    # Kırpma işlemi için sınırlayıcı kutunun koordinatlarını kullan
+    cropped_img = img[y:y+h, x:x+w]
+
+    import easyocr as ocr
+    import cv2
+    import numpy as np
+
+    ocr_motoru = ocr.Reader(['en', 'tr'])
+
+    yazilar = ocr_motoru.readtext(cropped_img)
+
+    for yazi in yazilar:
+        print(yazi)
+
+    # Kırpılmış resmi göster
+    cv2.imshow('Cropped Image', cropped_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+-------------MODELDEN ANLIK TESPİT EDİLEN GÖRSELİ saved_platese kaydediyor--------------
+
+# Test edilecek resmin dosya yolu
+image_path = 'arac7.jpg'
+
+# Eğittiğiniz modelin dosya yolu
+model_path = 'best.pt'
+
+# YOLO modelini yükle
+model = YOLO(model_path)
+
+# Plaka tanıma işlemi
+results = model(image_path)
+im1 =Image.open(image_path)
+sonuc = model.predict(source=im1, save=True)
+
+
+# Kaydedilen plakaların taşınacağı klasör
+save_directory = 'saved_plates'
+os.makedirs(save_directory, exist_ok=True)
+
+
+# Kaydedilen görüntülerin bulunduğu son 'predict' klasörünü bul
+predict_folders = sorted(glob.glob('runs/detect/predict*'), key=os.path.getmtime)
+last_predict_folder = predict_folders[-1] if predict_folders else None
+
+# Eğer son 'predict' klasörü varsa, içindeki görüntüleri 'saved_plates' klasörüne taşı
+if last_predict_folder:
+    for saved_image in glob.glob(f'{last_predict_folder}/*.jpg'):
+        shutil.move(saved_image, os.path.join(save_directory, os.path.basename(saved_image)))
+    print(f"Plakalar {save_directory} klasörüne taşındı.")
+else:
+    print("Kaydedilen plaka görüntüsü bulunamadı.")
+
+
+
+------------------MODELE SOKTUĞU ARACLARIN PLAKA TESPİTİ YAPILMIŞ HALİNİ SAVE_CAR KLASÖRÜNE
+ARAC[İNDEX SIRASI]INA GÖRE KAYDEDER.
+
+import os
+import shutil
+import glob
+
+# Test edilecek resmin dosya yolu
+image_path = 'arac2.jpg'
+
+# Eğittiğiniz modelin dosya yolu
+model_path = 'best.pt'
+
+# YOLO modelini yükle
+model = YOLO(model_path)
+
+# Plaka tanıma işlemi
+im1 = Image.open(image_path)
+sonuc = model.predict(source=im1, save=True)
+
+# Kaydedilen plakaların taşınacağı klasör
+save_directory = 'save_car'
+os.makedirs(save_directory, exist_ok=True)
+
+# Mevcut kayıt sayısını hesapla
+kayit_sirasi = len(os.listdir(save_directory)) + 1
+
+# Kaydedilen görüntülerin bulunduğu son 'predict' klasörünü bul
+predict_folders = sorted(glob.glob('runs/detect/predict*'), key=os.path.getmtime)
+last_predict_folder = predict_folders[-1] if predict_folders else None
+
+# Eğer son 'predict' klasörü varsa, içindeki görüntüleri 'saved_plates' klasörüne taşı
+if last_predict_folder:
+    for saved_image in glob.glob(f'{last_predict_folder}/*.jpg'):
+        new_filename = f'arac_{kayit_sirasi}.jpg'
+        new_file_path = os.path.join(save_directory, new_filename)
+        shutil.move(saved_image, new_file_path)
+        kayit_sirasi += 1
+
+    print(f"Plakalar {save_directory} klasörüne taşındı.")
+else:
+    print("Kaydedilen plaka görüntüsü bulunamadı.")
+
+
+----------------------------util.py-------------------
+
+import easyocr as ocr
+import cv2
+import numpy as np
+import os
+import glob
+
+# Resmi yükle
+#image_path = 'saved_car/...jpg'  # Gerçek resim yolunu buraya girin
+latest_image = max(glob.glob('save_car/*.jpg'), key=os.path.getctime)
+# Resmi yükle
+image_path = latest_image
+img = cv2.imread(image_path)
+
+# Kırmızı rengin BGR değerlerini tanımla
+# Bu değerler genel bir tahmindir ve görüntüye göre ayarlanmalıdır.
+lower_red = np.array([0, 0, 100])
+upper_red = np.array([100, 100, 255])
+
+# Kırmızı rengi maskele
+mask = cv2.inRange(img, lower_red, upper_red)
+
+# Maske üzerinde konturları bul
+contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+# Eğer kontur varsa, en büyük konturu bul
+if contours:
+    # En büyük kontur genellikle plaka çerçevesi olacaktır
+    largest_contour = max(contours, key=cv2.contourArea)
+    x, y, w, h = cv2.boundingRect(largest_contour)
+
+    # Kırpma işlemi için sınırlayıcı kutunun koordinatlarını kullan
+    cropped_img = img[y:y+h, x:x+w]
+
+    ocr_motoru = ocr.Reader(['en', 'tr'])
+    yazilar = ocr_motoru.readtext(cropped_img)
+    for yazi in yazilar:
+        print(yazi)
+
+    save_directory = 'saved_plates'
+    os.makedirs(save_directory, exist_ok=True)
+
+    # Kırpılmış resmi kaydet
+    save_path = os.path.join(save_directory, 'cropped_plaka.jpg')  # Kaydedilecek resmin dosya adı
+    cv2.imwrite(save_path, cropped_img)
+
+    # Kırpılmış resmi göster
+    cv2.imshow('Cropped Image', cropped_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+
+
+
+-------------------main.py----------------
+import pytesseract
+import cv2
+from PIL import Image
+import matplotlib.pyplot as plt
+from easyocr import easyocr
+from ultralytics import YOLO
+import os
+import shutil
+import glob
+
+# Test edilecek resmin dosya yolu
+image_path = 'mevoPlaka7.jpg'
+
+# Eğittiğiniz modelin dosya yolu
+model_path = 'best.pt'
+
+# YOLO modelini yükle
+model = YOLO(model_path)
+
+# Plaka tanıma işlemi
+im1 = Image.open(image_path)
+sonuc = model.predict(source=im1, save=True)
+
+# Kaydedilen plakaların taşınacağı klasör
+save_directory = 'save_car'
+os.makedirs(save_directory, exist_ok=True)
+
+# Mevcut kayıt sayısını hesapla
+kayit_sirasi = len(os.listdir(save_directory)) + 1
+
+# Kaydedilen görüntülerin bulunduğu son 'predict' klasörünü bul
+predict_folders = sorted(glob.glob('runs/detect/predict*'), key=os.path.getmtime)
+last_predict_folder = predict_folders[-1] if predict_folders else None
+
+# Eğer son 'predict' klasörü varsa, içindeki görüntüleri 'saved_plates' klasörüne taşı
+if last_predict_folder:
+    for saved_image in glob.glob(f'{last_predict_folder}/*.jpg'):
+        new_filename = f'arac_{kayit_sirasi}.jpg'
+        new_file_path = os.path.join(save_directory, new_filename)
+        shutil.move(saved_image, new_file_path)
+        kayit_sirasi += 1
+
+    print(f"Plakalar {save_directory} klasörüne taşındı.")
+else:
+    print("Kaydedilen plaka görüntüsü bulunamadı.")

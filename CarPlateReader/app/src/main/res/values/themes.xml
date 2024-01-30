@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CarPlateReader" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/turuncu</item>
+        <item name="android:statusBarColor">@color/arkaplan</item>
+    </style>
+
+    <style name="Theme.CarPlateReader" parent="Base.Theme.CarPlateReader" />
+</resources>

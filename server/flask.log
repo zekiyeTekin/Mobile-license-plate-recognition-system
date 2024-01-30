@@ -1,0 +1,380 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:19:55] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:24:43] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:25:34] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:25:41] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:25:42] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:25:43] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:25:43] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:25:54] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:26:00] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:26:10] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:26:42] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\mevo\\Desktop\\zekiye\\modelDeneme\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:27:19] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:28:07] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\mevo\\Desktop\\zekiye\\modelDeneme\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:testapi:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:37:20] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:testapi:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:43:58] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:testapi:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:51:36] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:testapi:File uploaded successfully
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 20:56:43] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:testapi:File uploaded successfully
+INFO:testapi:File uploaded successfully
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:testapi:File uploaded successfully
+INFO:testapi:File uploaded successfully
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug: * Detected change in 'c:\\Users\\mevo\\Desktop\\zekiye\\modelDeneme\\api\\testapi.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug: * Detected change in 'c:\\Users\\mevo\\Desktop\\zekiye\\modelDeneme\\api\\testapi.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug: * Detected change in 'c:\\Users\\mevo\\Desktop\\zekiye\\modelDeneme\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug: * Detected change in 'c:\\Users\\mevo\\Desktop\\zekiye\\modelDeneme\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 22:07:31] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 22:10:41] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\mevo\\Desktop\\zekiye\\modelDeneme\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+INFO:werkzeug:192.168.2.170 - - [22/Jan/2024 22:30:33] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:11:32] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 70 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:19:40] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:21:48] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:22:06] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+ERROR:api:list index out of range
+ERROR:api:Traceback (most recent call last):
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\api.py", line 41, in analyze_image
+    plaka=model()
+          ^^^^^^^
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\main1.py", line 51, in model
+    sekiz=util.plate_character_recognition()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\util.py", line 39, in plate_character_recognition
+    yeni = yazilar[3]
+           ~~~~~~~^^^
+IndexError: list index out of range
+
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:22:36] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+ERROR:api:list index out of range
+ERROR:api:Traceback (most recent call last):
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\api.py", line 41, in analyze_image
+    plaka=model()
+          ^^^^^^^
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\main1.py", line 51, in model
+    sekiz=util.plate_character_recognition()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\util.py", line 39, in plate_character_recognition
+    yeni = yazilar[3]
+           ~~~~~~~^^^
+IndexError: list index out of range
+
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:23:10] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:23:47] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+ERROR:api:list index out of range
+ERROR:api:Traceback (most recent call last):
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\api.py", line 41, in analyze_image
+    plaka=model()
+          ^^^^^^^
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\main1.py", line 51, in model
+    sekiz=util.plate_character_recognition()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\util.py", line 39, in plate_character_recognition
+    yeni = yazilar[3]
+           ~~~~~~~^^^
+IndexError: list index out of range
+
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:23:59] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 4
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 4 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 70 8192
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:24:20] "POST /app/upload HTTP/1.1" 200 -
+INFO:api:File uploaded successfully
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'sRGB' 41 1
+DEBUG:PIL.PngImagePlugin:STREAM b'sBIT' 54 3
+DEBUG:PIL.PngImagePlugin:b'sBIT' 54 3 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 69 1127
+WARNING:easyocr.easyocr:Neither CUDA nor MPS are available - defaulting to CPU. Note: This module is much faster with a GPU.
+ERROR:api:list index out of range
+ERROR:api:Traceback (most recent call last):
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\api.py", line 41, in analyze_image
+    plaka=model()
+          ^^^^^^^
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\main1.py", line 51, in model
+    sekiz=util.plate_character_recognition()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mevo\Desktop\zekiye\modelDeneme\util.py", line 39, in plate_character_recognition
+    yeni = yazilar[3]
+           ~~~~~~~^^^
+IndexError: list index out of range
+
+INFO:werkzeug:192.168.2.170 - - [23/Jan/2024 03:25:20] "POST /app/upload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.170:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 100-664-893
